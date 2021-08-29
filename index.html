@@ -1,16 +1,65 @@
 <html>
-    <head>
+
+<head>
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <h1>Simple Interest Calculator</h1>
+</head>
 
-        Amount <input type="number"  id="principal">  <br/>
-        Rate <input type="number"  id="rate">  <br/>
-        No. of Years <input type="number"  id="years">  <br/>
-        Interest : <span id="result"></span><br>
+<body>
+    <div class='calculator-container'>
+    <h1>Simple Interest Calculator</h1>
 
-        <button onclick="compute()">Compute</button>
-    </body>
+    <div class='content'>
+        <table>
+            <tr>
+                <td class='title'>Amount</td>
+                <td><input type="number" id="amount" autofocus></td>
+            </tr>
+            <br />
+            <tr>
+                <td class='title'>Rate</td>
+                <td><div class='rate-range'><input type="range" name="rangeInput" min="1" max="100" onchange="updateTextInput(this.value);">
+                    <p id="textInput" value="50"></p></div></td>
+            </tr>
+            <br />
+            <tr>
+                <td class='title'><label for="year-number">Choose a car:</label></td>
+                <td>
+                    <select id="years" name="year-number">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value='5'>5</option>
+                        <option value='6'>6</option>
+                        <option value='7'>7</option>
+                        <option value='8'>8</option>
+                        <option value='9'>9</option>
+                        <option value='10'>10</option>
+
+                    </select>
+                </td>
+            </tr>
+            <br />
+            <tr>
+                <td>
+                    <button onclick="compute()">Compute Interest</button>
+                </td>
+            </tr>
+            <br />
+            <tr>
+                <td class='title'>Interest :</td>
+            </tr>
+            <tr>
+
+                <td><span>If you deposit: <div id='amount-output' class='output'></div></span>
+                    <span>At an interest rate of: <div id='rate-output' class='output'></div></span>
+                    <span>You will receive an amount of: <div id="result" class='output'></div></span>
+                    <span>in the year: <div id='year-output' class='output'></div></span></td>
+            </tr>
+        </table>
+    </div>
+</div>
+</body>
+
 </html>

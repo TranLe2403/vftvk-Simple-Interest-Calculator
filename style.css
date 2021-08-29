@@ -1,4 +1,41 @@
-body {background-color:tan;}
-h1{color:green;}
+body {
+    text-align: center;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+}
+h1 {
+    color: gray;
+}
 
+.title {
+    width: 120px;
+}
 
+.content {
+    width: 50%;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+}
+
+button {
+    text-align: left;
+}
+
+.rate-range{
+    display: flex;
+}
+
+.calculator-container{
+    width: 50%;
+    height: 50%;
+    background-color: white;
+    border-radius: 20px;
+    padding: 12px;
+}
+
+.output {
+    background: yellow;
+    margin: 0;
+}
